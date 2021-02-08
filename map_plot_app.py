@@ -1,4 +1,5 @@
 # モジュールのインポート
+#python -m PyInstaller map_plot_app.py --onefile --windowed
 import os, tkinter.filedialog, tkinter.messagebox
 from tkinter.constants import E, LEFT, W
 import tkinter as tk
@@ -14,8 +15,8 @@ file = ''
 def map_plot():
     global save_fig,min_value,max_value
     try:
-        min_value = int(EditBox1.get())
-        max_value = int(EditBox2.get())
+        min_value = float(EditBox1.get())
+        max_value = float(EditBox2.get())
 
         label_size = 24
 
